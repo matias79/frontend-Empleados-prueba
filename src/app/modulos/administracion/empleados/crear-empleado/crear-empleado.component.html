@@ -1,0 +1,51 @@
+<div class="container aligh-center" >
+  <div class="row">
+    <h3 class="center-align">Crear Empleados</h3>
+    <article class="col s8 offset-s3">
+      <form [formGroup]="fgvalidador" (ngSubmit)="GuardaEmpleado()" class="col s6">
+        <div class="row">
+          <div class="input-field">
+            <label for="nombres">Nombres</label>
+            <input formControlName="nombres" type="text" name="nombres" required>
+          </div>
+
+          <div class="input-field">
+            <label for="apellidos">Apellidos</label>
+            <input formControlName="apellidos" type="text" name="apellidos" required>
+          </div>
+
+          <div class="input-field col s6 ">
+            <label for="estrato" >Estrato Social</label>
+            <input formControlName="estrato" id="fechaIngreso" type="text">            
+          </div>
+
+          <div class="input-field col s6">
+            <label for="sexo">Genero</label>
+            <input formControlName="sexo" formControlName="sexo" type="text" name="sexo" required>
+          </div>
+
+          <div class="input-field">
+            <h6>Fecha Nacimiento</h6>
+            <label for="fechaNacimiento" ></label>
+            <input formControlName="fechaNacimiento" id="fechaNacimiento" type="date">            
+          </div>
+
+          <div class="input-field">
+            <h6>Fecha ingreso</h6>
+            <label for="fechaIngreso" ></label>
+            <input formControlName="fechaIngreso" id="fechaIngreso" type="date">            
+          </div>
+
+        </div>
+
+        <p class="center-align">
+          <button [disabled]="!fgvalidador.valid" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+            <i class="material-icons right">send</i>
+          </button>
+        </p>
+      </form>
+
+    </article>
+      
+  </div>
+</div>

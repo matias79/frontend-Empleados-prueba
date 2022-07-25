@@ -1,0 +1,42 @@
+<div class="container">
+
+
+<a routerLink="/administracion/crear-empleado" class="btn">Ingresar Persona</a>
+<table class="table responsive">
+    <thead>
+      <tr>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Fecha Nacimiento</th>
+          <th>Sexo</th>
+          <th>Fecha Ingreso</th>
+          <th>Estrato Social</th>
+          <th>Editar</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let emp of listadoEmpleados">
+        <td>{{emp.nombres}}</td>
+        <td>{{emp.apellidos}}</td>
+        <td>{{emp.fechaNacimiento}}</td>
+        <td>{{emp.sexo}}</td>
+        <td>{{emp.fechaIngreso}}</td>
+        <td>{{emp.estrato}}</td>
+      </tr>
+      <tr>
+        <td>Jose Armando</td>
+        <td>Imbacuan Morillo</td>
+        <td>enero 30 1979</td>
+        <td>Masculino</td>
+        <td>julio 30 2022</td>
+        <td>3</td>
+      </tr>
+      
+    </tbody>
+    
+  </table>
+  <td>
+    
+</td>
+</div>
