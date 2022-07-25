@@ -15,8 +15,12 @@ export class EmpleadoService {
     return this.http.get<ModeloEmpleado[]>(`${this.url}/empleados`)
   }
 
+  buscarEmpleadosPorId(id:string):Observable<ModeloEmpleado>{
+    return this.http.get<ModeloEmpleado>(`${this.url}/empleados/${id}`)
+  }
+
   CrearEmpleado(empleado: ModeloEmpleado):Observable<ModeloEmpleado>{
-    return this.http.post<ModeloEmpleado>(`${this.url}/empleados`,empleado)
+    return this.http.post<ModeloEmpleado>(`${this.url}/empleados${empleado.id}`,empleado)
 
   }
 
